@@ -6,7 +6,7 @@
  * The page should work even without internet connection.
  */
 
-const CACHE_NAME = 'gravity-pause-v1';
+const CACHE_NAME = 'gravity-pause-v2';
 const OFFLINE_URL = '/';
 
 // Files to cache for offline use
@@ -64,6 +64,7 @@ self.addEventListener('activate', (event) => {
 
 /**
  * Fetch event - serve from cache, fallback to network
+ * Fixed for Safari: Avoid returning redirected responses
  */
 self.addEventListener('fetch', (event) => {
   // Only handle GET requests
@@ -71,38 +72,60 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Skip cross-origin requests
+  if (!event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
+  // For navigation requests (HTML pages), use network-first strategy
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          // Don't cache redirects (Safari fix)
+          if (response.redirected) {
+            return response;
+          }
+          // Cache successful responses
+          if (response.status === 200) {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Network failed, try cache
+          return caches.match(event.request)
+            .then((cached) => cached || caches.match(OFFLINE_URL));
+        })
+    );
+    return;
+  }
+
+  // For other requests (CSS, JS, images), use cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         if (response) {
-          // Return cached version
           return response;
         }
 
-        // Not in cache, fetch from network
         return fetch(event.request)
           .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+            // Don't cache non-successful or redirected responses
+            if (!response || response.status !== 200 || response.redirected) {
               return response;
             }
 
-            // Clone the response
             const responseToCache = response.clone();
-
-            // Add to cache for future use
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
               });
 
             return response;
-          })
-          .catch(() => {
-            // Network failed, return offline page for navigation requests
-            if (event.request.mode === 'navigate') {
-              return caches.match(OFFLINE_URL);
-            }
           });
       })
   );
