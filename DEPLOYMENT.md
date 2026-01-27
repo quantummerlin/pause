@@ -73,9 +73,9 @@ When approved, replace the placeholder `<div class="ad-slot">` elements with act
 ```
 
 ## Analytics Setup
-Recommended: Google Analytics 4 or Cloudflare Web Analytics
+**Configured:** Google Analytics 4 (G-VW4LGE7L1T)
 
-Track these key metrics:
+The GA4 tracking code has been added to all HTML pages. Track these key metrics:
 - Return visits within 7 days
 - Session duration (target: >40s)
 - Pages per session (target: >1.5)
