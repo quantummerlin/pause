@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start of Day — The Opening Hour</title>
+  
+  <meta name="description" content="The Start of Day pause marks the opening hour when possibility feels most available. A moment of fresh beginning.">
+  <meta name="keywords" content="start of day, morning pause, new day, fresh start, morning ritual, beginning">
+  <meta name="theme-color" content="#fdfcf8">
+  
+  <meta property="og:title" content="Start of Day — The Opening Hour">
+  <meta property="og:description" content="The moment when possibility feels most available. A fresh beginning.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%232a2820' stroke-width='4'/><circle cx='50' cy='50' r='4' fill='%232a2820'/></svg>">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VW4LGE7L1T');
+  </script>
+  
+  <style>
+    /* Warm morning theme */
+    body {
+      --bg-primary: #fdfcf8;
+      --bg-secondary: #f8f6f0;
+      --bg-tertiary: #f0eee6;
+      --text-primary: #2a2820;
+      --text-secondary: #4a4840;
+      --text-muted: #8a8878;
+      --text-subtle: #a8a898;
+      --accent: #3a3830;
+      --accent-soft: rgba(58, 56, 48, 0.08);
+      --border: #e8e6e0;
+      --border-soft: rgba(0, 0, 0, 0.04);
+      --ad-bg: #f5f3ed;
+      --glow: rgba(255, 220, 180, 0.08);
+      --shadow-soft: 0 2px 20px rgba(180, 160, 120, 0.08);
+      --shadow-medium: 0 4px 40px rgba(180, 160, 120, 0.12);
+      --gradient-subtle: linear-gradient(180deg, #fdfcf8 0%, #f8f4ec 100%);
+      background: var(--gradient-subtle);
+    }
+    
+    /* Subtle warm glow for morning */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(255, 200, 120, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+      animation: warmGlow 10s ease-in-out infinite;
+    }
+    
+    @keyframes warmGlow {
+      0%, 100% { 
+        opacity: 0.5;
+        transform: translate(0, 0);
+      }
+      50% { 
+        opacity: 0.8;
+        transform: translate(-5%, 5%);
+      }
+    }
+    
+    .countdown::before {
+      background: radial-gradient(ellipse at center, rgba(255, 200, 120, 0.1) 0%, transparent 70%);
+    }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <main class="container">
+    
+    <div class="identity">The opening hour</div>
+    
+    <section class="countdown-section">
+      <div class="countdown-label">Time until 6:00 AM</div>
+      <div class="countdown" role="timer" aria-live="polite">
+        <span id="hours" class="unit">00</span><span class="colon">:</span><span id="minutes" class="unit">00</span><span class="colon">:</span><span id="seconds" class="unit">00</span>
+      </div>
+    </section>
+    
+    <section class="explanation">
+      <p>Each day begins with a moment where nothing has been decided yet.</p>
+      <p>The slate is as clear as it will ever be.</p>
+      <p>This page marks that threshold.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="personal-section">
+      <h3>The morning pause tends to feel different depending on when you were born.</h3>
+      <form id="personal-form" class="input-group">
+        <input type="date" id="birthdate" class="date-input" aria-label="Enter your birthdate">
+        <button type="submit" class="submit-btn">See how it lands for me</button>
+      </form>
+      <div class="result-section" aria-live="polite">
+        <p class="result-text"></p>
+      </div>
+    </section>
+    
+    <section class="secondary">
+      <p>Some people feel this moment as potential.</p>
+      <p>Others as quiet readiness.</p>
+      <p>Both are accurate.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="seo-content">
+      <h2>What is the Start of Day pause?</h2>
+      <p>The Start of Day pause marks the transition from night into the active hours. It occurs at 6:00 AM local time — a threshold that many traditions recognize as the beginning of the day's true activity.</p>
+      <p>This moment carries a particular quality: the day ahead is still unformed. Decisions haven't been made, reactions haven't occurred, the day's story hasn't been written. For a brief window, possibility feels more available than it will later.</p>
+      <p>Noticing this moment doesn't require waking at 6 AM. The pause exists whether you're awake for it or not. But for those who do notice it, there's often a sense of alignment — a feeling of starting alongside something larger than personal routine.</p>
+    </section>
+    
+    <section class="variants-section">
+      <p>Other ways to experience shared moments</p>
+      <nav class="variant-links">
+        <a href="index.html" class="variant-link">Gravity Pause</a>
+        <a href="daily-reset.html" class="variant-link">Daily Reset</a>
+        <a href="before-sleep.html" class="variant-link">Before Sleep</a>
+        <a href="collective-breath.html" class="variant-link">Collective Breath</a>
+      </nav>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <footer>
+      <p class="footer-brand">Part of the Quantum Merlin library</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+    
+  </main>
+  
+  <script>
+    // Countdown to 6:00 AM local time
+    (function() {
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const labelEl = document.querySelector('.countdown-label');
+      
+      let lastSecond = -1;
+      
+      function getNextMorning() {
+        const now = new Date();
+        const target = new Date(now);
+        target.setHours(6, 0, 0, 0);
+        
+        if (now >= target) {
+          target.setDate(target.getDate() + 1);
+        }
+        return target;
+      }
+      
+      function pad(num) {
+        return String(num).padStart(2, '0');
+      }
+      
+      function animateDigit(el, val) {
+        if (el && el.textContent !== val) {
+          el.textContent = val;
+          el.classList.add('tick');
+          setTimeout(() => el.classList.remove('tick'), 150);
+        }
+      }
+      
+      function updateCountdown() {
+        const now = new Date();
+        const currentSecond = now.getSeconds();
+        
+        if (currentSecond === lastSecond) return;
+        lastSecond = currentSecond;
+        
+        const currentHour = now.getHours();
+        
+        // Check if we're in the "opening hour" (6 AM - 7 AM)
+        if (currentHour === 6) {
+          labelEl.textContent = 'The opening hour is now';
+          animateDigit(hoursEl, '00');
+          animateDigit(minutesEl, pad(59 - now.getMinutes()));
+          animateDigit(secondsEl, pad(59 - now.getSeconds()));
+          return;
+        }
+        
+        labelEl.textContent = 'Time until 6:00 AM';
+        
+        const target = getNextMorning();
+        let diff = target - now;
+        
+        const hours = Math.floor(diff / 3600000);
+        diff %= 3600000;
+        const minutes = Math.floor(diff / 60000);
+        diff %= 60000;
+        const seconds = Math.floor(diff / 1000);
+        
+        animateDigit(hoursEl, pad(hours));
+        animateDigit(minutesEl, pad(minutes));
+        animateDigit(secondsEl, pad(seconds));
+      }
+      
+      updateCountdown();
+      requestAnimationFrame(function tick() {
+        updateCountdown();
+        requestAnimationFrame(tick);
+      });
+    })();
+  </script>
+  <script src="personal.js"></script>
+</body>
+</html>

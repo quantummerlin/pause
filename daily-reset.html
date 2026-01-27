@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Reset — The Threshold Between Days</title>
+  
+  <meta name="description" content="The Daily Reset marks the threshold between one day and the next. A shared moment of transition that occurs for everyone.">
+  <meta name="keywords" content="daily reset, midnight pause, end of day, new day, shared moment, daily ritual">
+  <meta name="theme-color" content="#fafaf8">
+  
+  <meta property="og:title" content="Daily Reset — The Threshold Between Days">
+  <meta property="og:description" content="The threshold between one day and the next. A shared moment of transition.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%231a1a18' stroke-width='4'/><circle cx='50' cy='50' r='4' fill='%231a1a18'/></svg>">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VW4LGE7L1T');
+  </script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <main class="container">
+    
+    <div class="identity">The threshold between days</div>
+    
+    <section class="countdown-section">
+      <div class="countdown-label">Today ends in</div>
+      <div class="countdown" role="timer" aria-live="polite">
+        <span id="hours" class="unit">00</span><span class="colon">:</span><span id="minutes" class="unit">00</span><span class="colon">:</span><span id="seconds" class="unit">00</span>
+      </div>
+    </section>
+    
+    <section class="explanation">
+      <p>Every day has a moment where it quietly becomes the next.</p>
+      <p>This page marks that threshold.</p>
+      <p>What you carry forward is up to you.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="personal-section">
+      <h3>The daily reset tends to feel different depending on when you were born.</h3>
+      <form id="personal-form" class="input-group">
+        <input type="date" id="birthdate" class="date-input" aria-label="Enter your birthdate">
+        <button type="submit" class="submit-btn">See how it lands for me</button>
+      </form>
+      <div class="result-section" aria-live="polite">
+        <p class="result-text"></p>
+      </div>
+    </section>
+    
+    <section class="secondary">
+      <p>Some people mark this moment consciously.</p>
+      <p>Most experience it without noticing.</p>
+      <p>Both are valid.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="seo-content">
+      <h2>What is the Daily Reset?</h2>
+      <p>The Daily Reset is the moment when one day transitions into the next. It occurs at local midnight for each person, creating a rolling wave of renewal that circles the globe continuously.</p>
+      <p>Unlike the global Gravity Pause which happens simultaneously for everyone, the Daily Reset is personal to your location. When your day ends, someone else's is just beginning. This creates a continuous thread of transition that never stops.</p>
+      <p>Many people find that consciously noting this threshold — even briefly — creates a sense of completion. The day, whatever it held, is now behind you. What comes next is unwritten.</p>
+    </section>
+    
+    <section class="variants-section">
+      <p>Other ways to experience shared moments</p>
+      <nav class="variant-links">
+        <a href="index.html" class="variant-link">Gravity Pause</a>
+        <a href="before-sleep.html" class="variant-link">Before Sleep</a>
+        <a href="start-of-day.html" class="variant-link">Start of Day</a>
+        <a href="collective-breath.html" class="variant-link">Collective Breath</a>
+      </nav>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <footer>
+      <p class="footer-brand">Part of the Quantum Merlin library</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+    
+  </main>
+  
+  <script>
+    // Countdown to local midnight
+    (function() {
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const labelEl = document.querySelector('.countdown-label');
+      
+      let lastSecond = -1;
+      
+      function getNextLocalMidnight() {
+        const now = new Date();
+        const next = new Date(now);
+        next.setHours(24, 0, 0, 0);
+        return next;
+      }
+      
+      function pad(num) {
+        return String(num).padStart(2, '0');
+      }
+      
+      function animateDigit(el, val) {
+        if (el && el.textContent !== val) {
+          el.textContent = val;
+          el.classList.add('tick');
+          setTimeout(() => el.classList.remove('tick'), 150);
+        }
+      }
+      
+      function updateCountdown() {
+        const now = new Date();
+        const currentSecond = now.getSeconds();
+        
+        if (currentSecond === lastSecond) return;
+        lastSecond = currentSecond;
+        
+        const target = getNextLocalMidnight();
+        let diff = target - now;
+        
+        // Handle the reset moment
+        if (diff <= 0) {
+          labelEl.textContent = 'A new day begins';
+          animateDigit(hoursEl, '00');
+          animateDigit(minutesEl, '00');
+          animateDigit(secondsEl, '00');
+          return;
+        }
+        
+        labelEl.textContent = 'Today ends in';
+        
+        const hours = Math.floor(diff / 3600000);
+        diff %= 3600000;
+        const minutes = Math.floor(diff / 60000);
+        diff %= 60000;
+        const seconds = Math.floor(diff / 1000);
+        
+        animateDigit(hoursEl, pad(hours));
+        animateDigit(minutesEl, pad(minutes));
+        animateDigit(secondsEl, pad(seconds));
+      }
+      
+      updateCountdown();
+      requestAnimationFrame(function tick() {
+        updateCountdown();
+        requestAnimationFrame(tick);
+      });
+    })();
+  </script>
+  <script src="personal.js"></script>
+</body>
+</html>

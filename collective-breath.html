@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collective Breath — A Moment of Shared Stillness</title>
+  
+  <meta name="description" content="The Collective Breath marks moments throughout the day when the world seems to pause together. A shared stillness that occurs every hour.">
+  <meta name="keywords" content="collective breath, shared stillness, hourly pause, breathing moment, calm, mindfulness">
+  <meta name="theme-color" content="#fafaf8">
+  
+  <meta property="og:title" content="Collective Breath — A Moment of Shared Stillness">
+  <meta property="og:description" content="Moments throughout the day when the world seems to pause together.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%231a1a18' stroke-width='4'/><circle cx='50' cy='50' r='4' fill='%231a1a18'/></svg>">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VW4LGE7L1T');
+  </script>
+  
+  <style>
+    /* Breathing animation enhancement for this page */
+    .countdown {
+      animation: collectiveBreath 4s ease-in-out infinite;
+    }
+    
+    @keyframes collectiveBreath {
+      0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% { 
+        transform: scale(1.02);
+        opacity: 0.9;
+      }
+    }
+    
+    /* Subtle pulsing ring behind countdown */
+    .countdown-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 280px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      animation: pulseRing 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    .countdown-section {
+      position: relative;
+    }
+    
+    @keyframes pulseRing {
+      0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+      }
+      50% { 
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.1;
+      }
+    }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <main class="container">
+    
+    <div class="identity">A moment of shared stillness</div>
+    
+    <section class="countdown-section">
+      <div class="countdown-label">Next collective breath in</div>
+      <div class="countdown" role="timer" aria-live="polite">
+        <span id="minutes" class="unit">00</span><span class="colon">:</span><span id="seconds" class="unit">00</span>
+      </div>
+    </section>
+    
+    <section class="explanation">
+      <p>Every hour, at the top of the hour, there's a collective breath.</p>
+      <p>A moment when clocks align and time briefly holds still.</p>
+      <p>You can join it, or let it pass.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="personal-section">
+      <h3>The collective breath tends to register differently depending on when you were born.</h3>
+      <form id="personal-form" class="input-group">
+        <input type="date" id="birthdate" class="date-input" aria-label="Enter your birthdate">
+        <button type="submit" class="submit-btn">See how it lands for me</button>
+      </form>
+      <div class="result-section" aria-live="polite">
+        <p class="result-text"></p>
+      </div>
+    </section>
+    
+    <section class="secondary">
+      <p>This moment repeats 24 times each day.</p>
+      <p>Most pass unnoticed.</p>
+      <p>Noticing even one can shift something subtle.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="seo-content">
+      <h2>What is the Collective Breath?</h2>
+      <p>The Collective Breath marks the top of every hour — those brief moments when minute hands align at twelve and time seems to pause before continuing. It happens 24 times each day, creating regular intervals of potential stillness.</p>
+      <p>Unlike the daily Gravity Pause which occurs once, the Collective Breath offers multiple entry points throughout the day. Miss one, and another arrives within the hour. This frequency makes it accessible without creating pressure.</p>
+      <p>The name "Collective Breath" reflects what many people report experiencing at these moments: a natural tendency to pause, however briefly. Whether this is psychological, physiological, or simply the power of suggestion doesn't matter. The moment exists regardless of explanation.</p>
+      <p>Some people use these hourly markers as gentle reminders to check in with themselves. Others simply notice them when they happen to glance at a clock. Both approaches are valid. The breath continues whether observed or not.</p>
+    </section>
+    
+    <section class="variants-section">
+      <p>Other ways to experience shared moments</p>
+      <nav class="variant-links">
+        <a href="index.html" class="variant-link">Gravity Pause</a>
+        <a href="daily-reset.html" class="variant-link">Daily Reset</a>
+        <a href="before-sleep.html" class="variant-link">Before Sleep</a>
+        <a href="start-of-day.html" class="variant-link">Start of Day</a>
+      </nav>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <footer>
+      <p class="footer-brand">Part of the Quantum Merlin library</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+    
+  </main>
+  
+  <script>
+    // Countdown to next top of the hour
+    (function() {
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const labelEl = document.querySelector('.countdown-label');
+      
+      let lastSecond = -1;
+      let isBreathing = false;
+      
+      function pad(num) {
+        return String(num).padStart(2, '0');
+      }
+      
+      function animateDigit(el, val) {
+        if (el && el.textContent !== val) {
+          el.textContent = val;
+          el.classList.add('tick');
+          setTimeout(() => el.classList.remove('tick'), 150);
+        }
+      }
+      
+      function updateCountdown() {
+        const now = new Date();
+        const currentSecond = now.getSeconds();
+        
+        if (currentSecond === lastSecond) return;
+        lastSecond = currentSecond;
+        
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        
+        // Check if we're at the top of the hour (first 30 seconds)
+        if (minutes === 0 && seconds < 30) {
+          if (!isBreathing) {
+            isBreathing = true;
+            labelEl.textContent = 'Collective breath occurring';
+            document.body.classList.add('breathing-moment');
+          }
+          animateDigit(minutesEl, '00');
+          animateDigit(secondsEl, pad(30 - seconds));
+          return;
+        }
+        
+        if (isBreathing) {
+          isBreathing = false;
+          labelEl.textContent = 'Next collective breath in';
+          document.body.classList.remove('breathing-moment');
+        }
+        
+        // Calculate time until next hour
+        const remainingMinutes = 59 - minutes;
+        const remainingSeconds = 59 - seconds;
+        
+        animateDigit(minutesEl, pad(remainingMinutes));
+        animateDigit(secondsEl, pad(remainingSeconds));
+      }
+      
+      updateCountdown();
+      requestAnimationFrame(function tick() {
+        updateCountdown();
+        requestAnimationFrame(tick);
+      });
+    })();
+  </script>
+  <script src="personal.js"></script>
+</body>
+</html>

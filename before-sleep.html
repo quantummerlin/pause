@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before Sleep — The Quieting Hour</title>
+  
+  <meta name="description" content="The Before Sleep pause marks the quieting hour when the day's activity naturally winds down. A moment of transition into rest.">
+  <meta name="keywords" content="before sleep, evening pause, night time, rest, wind down, quiet moment, bedtime">
+  <meta name="theme-color" content="#0f0f0e">
+  
+  <meta property="og:title" content="Before Sleep — The Quieting Hour">
+  <meta property="og:description" content="The moment when the day's activity naturally winds down. A transition into rest.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23f0f0ec' stroke-width='4'/><circle cx='50' cy='50' r='4' fill='%23f0f0ec'/></svg>">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VW4LGE7L1T');
+  </script>
+  
+  <style>
+    /* Dark theme overrides */
+    body {
+      --bg-primary: #0f0f0e;
+      --bg-secondary: #1a1a18;
+      --bg-tertiary: #242422;
+      --text-primary: #f0f0ec;
+      --text-secondary: #c0c0b8;
+      --text-muted: #808078;
+      --text-subtle: #606058;
+      --accent: #f0f0ec;
+      --accent-soft: rgba(240, 240, 236, 0.08);
+      --border: #2a2a28;
+      --border-soft: rgba(255, 255, 255, 0.06);
+      --ad-bg: #1a1a18;
+      --glow: rgba(255, 255, 255, 0.03);
+      --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.2);
+      --shadow-medium: 0 4px 40px rgba(0, 0, 0, 0.3);
+      --gradient-subtle: linear-gradient(180deg, #0f0f0e 0%, #0a0a09 100%);
+      background: var(--gradient-subtle);
+    }
+    
+    /* Subtle star-like particles for night theme */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.15), transparent),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1), transparent),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.12), transparent),
+        radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,0.08), transparent),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.1), transparent),
+        radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.12), transparent);
+      pointer-events: none;
+      z-index: 0;
+      animation: twinkle 8s ease-in-out infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <main class="container">
+    
+    <div class="identity">The quieting hour</div>
+    
+    <section class="countdown-section">
+      <div class="countdown-label">Time until 10:00 PM</div>
+      <div class="countdown" role="timer" aria-live="polite">
+        <span id="hours" class="unit">00</span><span class="colon">:</span><span id="minutes" class="unit">00</span><span class="colon">:</span><span id="seconds" class="unit">00</span>
+      </div>
+    </section>
+    
+    <section class="explanation">
+      <p>This shared moment often feels quieter when the day is ending.</p>
+      <p>The mind naturally begins to slow.</p>
+      <p>There's nothing you need to do with this.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="personal-section">
+      <h3>The evening pause registers differently depending on when you were born.</h3>
+      <form id="personal-form" class="input-group">
+        <input type="date" id="birthdate" class="date-input" aria-label="Enter your birthdate">
+        <button type="submit" class="submit-btn">See how it lands for me</button>
+      </form>
+      <div class="result-section" aria-live="polite">
+        <p class="result-text"></p>
+      </div>
+    </section>
+    
+    <section class="secondary">
+      <p>Some people notice this moment as a natural boundary.</p>
+      <p>The day's demands begin to release their grip.</p>
+      <p>What remains is quieter.</p>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <section class="seo-content">
+      <h2>What is the Before Sleep pause?</h2>
+      <p>The Before Sleep pause marks the transition from the day's activity into the quieter hours before rest. It occurs at 10:00 PM local time — a threshold that many cultures have recognized as the beginning of the night's stillness.</p>
+      <p>This isn't about sleep schedules or productivity. It's simply a marker of a natural transition that happens whether we notice it or not. The world doesn't stop at this hour, but something in the rhythm of the day does shift.</p>
+      <p>Many people find that acknowledging this moment — even briefly — helps the mind begin its natural process of unwinding. Not through effort, but through recognition.</p>
+    </section>
+    
+    <section class="variants-section">
+      <p>Other ways to experience shared moments</p>
+      <nav class="variant-links">
+        <a href="index.html" class="variant-link">Gravity Pause</a>
+        <a href="daily-reset.html" class="variant-link">Daily Reset</a>
+        <a href="start-of-day.html" class="variant-link">Start of Day</a>
+        <a href="collective-breath.html" class="variant-link">Collective Breath</a>
+      </nav>
+    </section>
+    
+    <div class="ad-slot" aria-hidden="true">
+      <span>Advertisement</span>
+    </div>
+    
+    <footer>
+      <p class="footer-brand">Part of the Quantum Merlin library</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+    
+  </main>
+  
+  <script>
+    // Countdown to 10:00 PM local time
+    (function() {
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const labelEl = document.querySelector('.countdown-label');
+      
+      let lastSecond = -1;
+      
+      function getNextEvening() {
+        const now = new Date();
+        const target = new Date(now);
+        target.setHours(22, 0, 0, 0);
+        
+        if (now >= target) {
+          target.setDate(target.getDate() + 1);
+        }
+        return target;
+      }
+      
+      function pad(num) {
+        return String(num).padStart(2, '0');
+      }
+      
+      function animateDigit(el, val) {
+        if (el && el.textContent !== val) {
+          el.textContent = val;
+          el.classList.add('tick');
+          setTimeout(() => el.classList.remove('tick'), 150);
+        }
+      }
+      
+      function updateCountdown() {
+        const now = new Date();
+        const currentSecond = now.getSeconds();
+        
+        if (currentSecond === lastSecond) return;
+        lastSecond = currentSecond;
+        
+        const currentHour = now.getHours();
+        
+        // Check if we're in the "quieting hour" (10 PM - 11 PM)
+        if (currentHour === 22) {
+          labelEl.textContent = 'The quieting hour is now';
+          animateDigit(hoursEl, '00');
+          animateDigit(minutesEl, pad(59 - now.getMinutes()));
+          animateDigit(secondsEl, pad(59 - now.getSeconds()));
+          return;
+        }
+        
+        labelEl.textContent = 'Time until 10:00 PM';
+        
+        const target = getNextEvening();
+        let diff = target - now;
+        
+        const hours = Math.floor(diff / 3600000);
+        diff %= 3600000;
+        const minutes = Math.floor(diff / 60000);
+        diff %= 60000;
+        const seconds = Math.floor(diff / 1000);
+        
+        animateDigit(hoursEl, pad(hours));
+        animateDigit(minutesEl, pad(minutes));
+        animateDigit(secondsEl, pad(seconds));
+      }
+      
+      updateCountdown();
+      requestAnimationFrame(function tick() {
+        updateCountdown();
+        requestAnimationFrame(tick);
+      });
+    })();
+  </script>
+  <script src="personal.js"></script>
+</body>
+</html>
