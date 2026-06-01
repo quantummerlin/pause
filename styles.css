@@ -198,8 +198,14 @@ body::before {
   margin-bottom: 0;
 }
 
-/* Ad Slots - Seamless Integration */
+/* Ad Slots - Hidden until AdSense approved */
 .ad-slot {
+  display: none;
+}
+
+/* When AdSense is ready, add class .ads-approved to body */
+body.ads-approved .ad-slot {
+  display: flex;
   margin: 64px auto;
   padding: 40px 32px;
   background: var(--ad-bg);
@@ -211,16 +217,14 @@ body::before {
   text-transform: uppercase;
   max-width: 560px;
   min-height: 100px;
-  display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-soft);
   transition: all 0.3s ease;
-  opacity: 0;
   animation: fadeIn 1s ease 1s forwards;
 }
 
-.ad-slot:hover {
+body.ads-approved .ad-slot:hover {
   background: var(--bg-secondary);
 }
 

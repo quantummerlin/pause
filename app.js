@@ -21,7 +21,6 @@
   // State
   let isPauseActive = false;
   let pauseTimeout = null;
-  let lastSecond = -1;
 
   /**
    * Get the next UTC midnight as a Date object
@@ -50,7 +49,7 @@
    */
   function animateDigit(element, newValue) {
     if (!element) return;
-    
+
     const currentValue = element.textContent;
     if (currentValue !== newValue) {
       element.textContent = newValue;
@@ -86,14 +85,9 @@
     diff %= 60000;
     const seconds = Math.floor(diff / 1000);
 
-    // Only animate on actual second change
-    const currentSecond = now.getSeconds();
-    if (currentSecond !== lastSecond) {
-      lastSecond = currentSecond;
-      animateDigit(hoursEl, pad(hours));
-      animateDigit(minutesEl, pad(minutes));
-      animateDigit(secondsEl, pad(seconds));
-    }
+    animateDigit(hoursEl, pad(hours));
+    animateDigit(minutesEl, pad(minutes));
+    animateDigit(secondsEl, pad(seconds));
   }
 
   /**
@@ -101,7 +95,7 @@
    */
   function activatePause() {
     isPauseActive = true;
-    
+
     if (labelEl) {
       labelEl.textContent = 'Pause occurring';
       labelEl.classList.add('pause-active');
@@ -126,7 +120,7 @@
    */
   function deactivatePause() {
     isPauseActive = false;
-    
+
     if (labelEl) {
       labelEl.textContent = 'Time until next pause';
       labelEl.classList.remove('pause-active');
@@ -153,22 +147,14 @@
   }
 
   /**
-   * High-performance animation loop using requestAnimationFrame
-   */
-  function tick() {
-    updateCountdown();
-    requestAnimationFrame(tick);
-  }
-
-  /**
    * Initialize the countdown with smooth entry
    */
   function init() {
     // Initial update
     updateCountdown();
 
-    // Start the animation loop
-    requestAnimationFrame(tick);
+    // Update once per second — no need for 60fps rAF loop
+    setInterval(updateCountdown, 1000);
 
     // Store timezone info for potential display
     window.gravityPause = {

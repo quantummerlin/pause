@@ -17,11 +17,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pause.quantummerlin.com">
   <meta property="og:site_name" content="Gravity Pause">
+  <meta property="og:image" content="https://pause.quantummerlin.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gravity Pause — concentric circles around a central dot, representing a shared moment in time">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gravity Pause — A Shared Moment in Time">
   <meta name="twitter:description" content="A shared moment the entire world reaches at the same time. Nothing is required of you.">
+  <meta name="twitter:image" content="https://pause.quantummerlin.com/og-image.png">
   
   <!-- PWA -->
   <meta name="theme-color" content="#fafaf8">
@@ -33,6 +38,8 @@
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap"></noscript>
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -73,12 +80,16 @@
       <p>When it arrives, nothing is expected of you.</p>
       <p>You can notice it, or ignore it.</p>
     </section>
-    
-    <!-- Ad Slot 1 -->
-    <div class="ad-slot" aria-hidden="true">
-      <span>Advertisement</span>
-    </div>
-    
+
+    <!-- SEO Content Block (moved up for crawlability) -->
+    <section class="seo-content">
+      <h2>What is the Gravity Pause?</h2>
+      <p>The Gravity Pause is a daily shared moment that occurs at the same instant for everyone around the world. It marks a point in time where nothing is required — a brief threshold between one moment and the next.</p>
+      <p>Unlike calendars or clocks that divide time into tasks and obligations, the Gravity Pause simply exists. It doesn't ask you to do anything, believe anything, or change anything. It's a marker, nothing more.</p>
+      <p>Many people find that noticing these moments — even briefly — creates a subtle sense of connection to something larger than their immediate circumstances. Others simply appreciate having a fixed point in time that isn't attached to productivity or purpose.</p>
+      <p>The Gravity Pause occurs daily at UTC midnight, which means it arrives at different local times depending on where you are. This shared timing creates a quiet thread connecting people across time zones, cultures, and circumstances.</p>
+    </section>
+
     <!-- Personal Input Section -->
     <section class="personal-section">
       <h3>This moment tends to register differently depending on when you were born.</h3>
@@ -103,38 +114,7 @@
       <p>Moments like this are easy to miss.</p>
       <p>This page exists simply to mark one.</p>
     </section>
-    
-    <!-- Ad Slot 2 -->
-    <div class="ad-slot" aria-hidden="true">
-      <span>Advertisement</span>
-    </div>
-    
-    <!-- SEO Content Block -->
-    <section class="seo-content">
-      <h2>What is the Gravity Pause?</h2>
-      <p>The Gravity Pause is a daily shared moment that occurs at the same instant for everyone around the world. It marks a point in time where nothing is required — a brief threshold between one moment and the next.</p>
-      <p>Unlike calendars or clocks that divide time into tasks and obligations, the Gravity Pause simply exists. It doesn't ask you to do anything, believe anything, or change anything. It's a marker, nothing more.</p>
-      <p>Many people find that noticing these moments — even briefly — creates a subtle sense of connection to something larger than their immediate circumstances. Others simply appreciate having a fixed point in time that isn't attached to productivity or purpose.</p>
-      <p>The Gravity Pause occurs daily at UTC midnight, which means it arrives at different local times depending on where you are. This shared timing creates a quiet thread connecting people across time zones, cultures, and circumstances.</p>
-    </section>
-    
-    <!-- Variant Links -->
-    <section class="variants-section">
-      <p>Some people experience this moment differently in other contexts</p>
-      <nav class="variant-links" aria-label="Other pause experiences">
-        <a href="daily-reset.html" class="variant-link">Daily Reset</a>
-        <a href="before-sleep.html" class="variant-link">Before Sleep</a>
-        <a href="start-of-day.html" class="variant-link">Start of Day</a>
-        <a href="collective-breath.html" class="variant-link">Collective Breath</a>
-        <a href="random-pause.html" class="variant-link">Random Pause</a>
-      </nav>
-    </section>
-    
-    <!-- Ad Slot 3 -->
-    <div class="ad-slot" aria-hidden="true">
-      <span>Advertisement</span>
-    </div>
-    
+
     <!-- Footer -->
     <footer>
       <p class="footer-brand">Part of the Quantum Merlin library of quiet tools</p>
